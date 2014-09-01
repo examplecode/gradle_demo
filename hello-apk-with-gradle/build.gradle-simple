@@ -28,22 +28,5 @@ android {
         }
     }
 
-    signingConfigs {
-        myConfig{
-            storeFile file("examplecode.keystore")
-            storePassword "examplecode"
-            keyAlias "examplecode"
-            keyPassword "examplecode"
-        }
-    }
-
-    buildTypes {
-        release {
-            signingConfig  signingConfigs.myConfig
-            runProguard true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard.cfg'
-        }
-    }
-
 
 }
