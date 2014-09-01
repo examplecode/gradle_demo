@@ -26,4 +26,19 @@ android {
             assets.srcDirs = ['assets']
         }
     }
+
+    signingConfigs {
+        myConfig{
+            storeFile file("examplecode.keystore")
+            storePassword "examplecode"
+            keyAlias "examplecode"
+            keyPassword "examplecode"
+        }
+    }
+
+    buildTypes{
+        release {
+            signingConfig  signingConfigs.myConfig
+        }
+    }
 }
